@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply h-full w-full m-0 p-0 text-circlehd-dark bg-circlehd-light font-sans;
+    touch-action: manipulation;
+  }
+}
+
+@layer components {
+  /* Reusable form input base class */
+  .input-field {
+    @apply w-full px-4 py-3 border border-circlehd-border rounded-lg bg-white 
+      outline-none transition-all duration-200 text-sm focus-visible:ring-2 focus-visible:ring-circlehd-blue/50 focus-visible:border-circlehd-blue;
+  }
+  
+  .input-error {
+    @apply border-circlehd-error focus-visible:ring-circlehd-error/40 focus-visible:border-circlehd-error;
+  }
+}
